@@ -33,6 +33,11 @@ img {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, 200%);
 }
+body {
+        background-image: url('');
+        width: 100%;
+        height: 100%;
+}
 </style>
 </head>
 <body>    
@@ -43,11 +48,10 @@ img {
     <h1>
         Click the button to generate a random picture of a shiba
     </h1>
-    <<div class="container">
+    <div class="container">
   <div class="center">
-    <button style="font-family: Verdana, sans-	    						serif;font-size: 20px;font-weight: bold;height:75px;width:200px">Generate Shiba</button>
+    <button id="generateButton" style="font-family: Verdana, sans-serif;font-size: 20px;font-weight: bold;height:75px;width:200px">Generate Shiba</button>
   </div>
 </div>
 </html>
-<img src="https://cdn.shibe.online/shibes/d725228f095cce75073baedcebb84c52f127abcd.jpg" alt="Shiba" width="500" height="500" style="width:50%;">
-<img src="me.jpg" width="200" height="267" alt="me">
+<img id="generatedImage" src="https://cdn.shibe.online/shibes/d725228f095cce75073baedcebb84c52f127abcd.jpg" alt="Shiba" width="500" height="500" style="width:50%;">
