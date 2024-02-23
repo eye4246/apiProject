@@ -1,3 +1,5 @@
+const picture = document.querySelector(".testing");
+picture.addEventListener("submit", myFunction)
 const apiData = {
     url: "http://shibe.online/api/shibes",
     slash: "%2F",
@@ -7,23 +9,16 @@ const apiData = {
 const { url, slash, parameter, q } = apiData;
 const apiUrl = `${url}${slash}${parameter}${q}`;
 
-function myFunction(id){
-    const apiData1 = {
-        url: "http://shibe.online/api/shibes",
-        slash: "%2F",
-        parameter: "?count",
-        q: "&",
-    };
-    const { url, slash, parameter, q } = apiData1;
-    const apiUrl1 = `${url}${slash}${parameter}${q}`}
-
-    document.addEventListener('DOMContentLoaded', function() {
-        const generateButton = document.getElementById('generateButton');
-        const generatedImage = document.getElementById('generatedImage');
-    
-        generateButton.addEventListener('click', function() {
+function myFunction(){
+    fetch("http://shibe.online/api/shibes?count=2&urls=true&httpsUrls=true")
+        .then((result) => console.log("",result.json()));
         
-            const imageUrl = 'https://cdn.shibe.online/shibes/d725228f095cce75073baedcebb84c52f127abcd.jpg'; 
-            generatedImage.src = imageUrl;
-        });
-    });
+        apiData.q = "";
+    //console log
+    }
+function buttonHandler() {
+      document.getElementById(".testing").innerHTML =
+        "<img src= 'http://shibe.online/api/shibes?count=2&urls=true&httpsUrls=true' alt='Shiba' width='100%' />";
+        console.log("http://shibe.online/api/shibes?count=2&urls=true&httpsUrls=true");
+        picture.innerHTML = "";
+    };
