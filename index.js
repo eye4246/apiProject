@@ -1,24 +1,19 @@
-const picture = document.querySelector(".testing");
-picture.addEventListener("submit", myFunction)
+const button = document.querySelector(".myButton");
+console.log("This is the query selector",button)
+button.addEventListener("click", myFunction)
 const apiData = {
     url: "http://shibe.online/api/shibes",
-    slash: "%2F",
-    parameter: "?count",
+    parameter: "?count=2",
     q: "&",
+    urls: "urls=true",
+    httpsUrls: "httpsUrls=true",
 };
-const { url, slash, parameter, q } = apiData;
-const apiUrl = `${url}${slash}${parameter}${q}`;
-
+//http://shibe.online/api/shibes?count=2&urls=true&httpsUrls=true
+const { url, parameter, q, urls , httpsUrls } = apiData;
+const apiURL = `${url}${parameter}${q}${urls}${q}${httpsUrls}`;
+console.log("This the api url", apiURL)
 function myFunction(){
-    fetch("http://shibe.online/api/shibes?count=2&urls=true&httpsUrls=true")
+    console.log("I am in my function")
+    fetch(apiURL)
         .then((result) => console.log("",result.json()));
-        
-        apiData.q = "";
-    //console log
     }
-function buttonHandler() {
-      document.getElementById(".testing").innerHTML =
-        "<img src= 'http://shibe.online/api/shibes?count=2&urls=true&httpsUrls=true' alt='Shiba' width='100%' />";
-        console.log("http://shibe.online/api/shibes?count=2&urls=true&httpsUrls=true");
-        picture.innerHTML = "";
-    };
