@@ -17,16 +17,26 @@ const apiURL = `${url}${parameter}${q}${urls}${q}${httpsUrls}`;
 function myFunction(){
     //document.getElementById(".myButton").innerHTML="<img src='http://shibe.online/api/shibes?count=1&urls=true&httpsUrls=true' alt='shiba' width='100%' />";
     console.log("I am in my function")
+    
+    const picContainer = document.querySelector(".picContainer")
+    picContainer.innerHTML = ""
+    console.log("This is pic container")
     fetch(apiURL)
         .then((result) => result.json())
         .then((data) => {
         data.forEach((shiba) => {
             //console.log(Count)
             //setAttribute("href", shiba.url)
-            let i = document.createElement("img");;
+            let i = document.createElement("img");
+            //document.body.appendChild(i);
+            picContainer.appendChild(i)
+            //picContainer.innerHTML = i
             i.setAttribute("src", shiba);
-                i.setAttribute("width", "100%");
-                document.body.appendChild(i);
+            i.setAttribute("width", "60%");
+            //picContainer.appendChild(i)
+
+            
+            
     })
 })
 }
