@@ -13,13 +13,8 @@ const apiData = {
     urls: "urls=true",
     httpsUrls: "httpsUrls=true",
 };
-//http://shibe.online/api/shibes?count=2&urls=true&httpsUrls=true
-//const { a,b,c,d,e,f,g } = apiData;
 let apiURL = ""
-//const apiURL = `${url}${parameter}${parameterval}${q}${urls}${q}${httpsUrls}`;
-//console.log("This the api url", apiURL)
 
-//apiData.parameterval = `${input.value}`
 console.log(input);
 
 function retrieve(event) {
@@ -53,9 +48,6 @@ function myFunction(numberofShibas, apiURL){
             //console.log(Count)
             //setAttribute("href", shibalink.url)
             let i = document.createElement("img");
-            //document.body.appendChild(i);
-            //picContainer.appendChild(i)
-            //picContainer.innerHTML = i
             i.setAttribute("src", shibalink);
             i.setAttribute("width", "60%");
             picContainer.appendChild(i)

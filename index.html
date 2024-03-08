@@ -1,62 +1,38 @@
-<!-- <!DOCTYPE html>
-<html>
-    <h1>
-        Click the button to generate a random picture of a shiba
-    </h1>
-    <button type="button">Generate</button>
-</html>
-<img src=""https://cdn.shibe.online/shibes/d725228f095cce75073baedcebb84c52f127abcd.jpg"" alt="Shiba" width="500" height="500" style="vertical-align:top"> -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shiba Generator</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 150px; 
-}
-
-.container { 
-  height: 200px;
-  position: relative;
-}
-
-.center {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 45%;
-  /* -ms-transform: translate(-50%, -50%);    */
-  /* transform: translate(-50%, 200%);   */
-}
-.center1 {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 20%;
-  -ms-transform: translate(-50%, -50%);  
-  transform: translate(-50%, 200%);  
-}
 </style>
 </head>
 <body>  
+  
+    <div class="heading">
+      <div class="center2">
+        Shiba Generator
+      </div>
+    
+    </div>
+
+  <div class="image-container">
+    <img src="data:image/jpeg;base64,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" width="300" height="200" class="center1">
+</div>
   <div class="center"> 
   <body class="search" action="">
-    <span class="search-text">Enter the amount a shibas you would like -></span>
+    <span class="search-text">Enter the amount a shibas you would like </span>
     <form class="search-bar" action="">
       <input 
       type="text" 
       class="input" 
-      style="width: 20vw; margin-right: 50px;"
+      style="width: 20vw; margin-right: 10px;"
       >
       <input type="submit" value="Enter">
     </form>
     <div id="error-handle" class="error-handle"></div>
-    <!-- <div id="topic-image" style="position: relative; top: -10vh"></div> -->
     <div class="box">
       <div></div>
       <div></div>
@@ -71,32 +47,18 @@ img {
   </body>
 </div> 
   <main class="search-container" style="position: relative; top: -5vh">
-    <!-- <h3 class="topic-statement">
-      
-    </h3> -->
-    <div id="news-container">
-      <!-- <ul class="news-list" style="background-color: rgb(241, 241, 241)"> -->
-      </ul>
-    </div>
   </main>
 </body>
 </html>
 <!DOCTYPE html>
 <html>
-    <h1>
-        Click the button to generate a random picture of a shiba
-    </h1>
     <div class="container">
   <div class="center"> 
-    <button class="myButton" id="generateButton" style="font-family: Verdana, sans-serif;font-size: 20px;font-weight: bold;height:75px;width:200px">Generate Shiba</button>
   <div class="picContainer"></div>
   </div>
 </div>
-<!-- <div class="center"> -->
-  <!-- erfergerge -->
-<!-- </div> -->
 </html>
-<!-- <img id="generatedImage" src="https://cdn.shibe.online/shibes/d725228f095cce75073baedcebb84c52f127abcd.jpg" alt="Shiba" width="500" height="500" style="width:50%;"> -->
+
 <div>
   <script src="index.js"></script>
 </div>
