@@ -1,20 +1,12 @@
 
 
-  /* Define the styling for each cell in the lattice pattern */
-  
-
-  /* Position the odd-indexed cells to create the lattice pattern */
-  
-
-  /* Define background images for specific cells */
-  
   .heading {
     font-size: 24px;
     font-weight: bold;
-    color: #333; /* Dark gray color */
+    color: #333;
     padding: 15px;
-    background-color: #f0f0f0; /* Light gray background */
-    border-bottom: 2px solid #ccc; /* Bottom border */
+    background-color: #f0f0f0; 
+    border-bottom: 2px solid #ccc; 
   }
   img {
     display: block;
@@ -33,8 +25,7 @@
     position: absolute;
     top: 40%;
     left: 40%;
-    /* -ms-transform: translate(-50%, -50%);    */
-    /* transform: translate(-50%, 200%);   */
+   
   }
   .center1 {
     margin: 0;
@@ -49,6 +40,5 @@
     position: absolute;
     top: 60%;
     left: 5%;
-    /* -ms-transform: translate(-50%, -50%);    */
-    /* transform: translate(-50%, 200%);   */
+    
   }
