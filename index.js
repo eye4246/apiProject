@@ -1,7 +1,7 @@
 const searchFrom = document.querySelector(".search");
 const input = document.querySelector(".input");
 const button = document.querySelector(".myButton");
-console.log("This is the query selector",button)
+
 
 
 searchFrom.addEventListener("submit", retrieve)
@@ -11,7 +11,7 @@ const apiData = {
     parameterval: "",
     q: "&",
     urls: "urls=true",
-    httpsUrls: "httpsUrls=true",
+    httpsUrls: "httpUrls=true",
 };
 let apiURL = ""
 
