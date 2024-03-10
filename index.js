@@ -11,7 +11,7 @@ const apiData = {
     parameterval: "",
     q: "&",
     urls: "urls=true",
-    httpsUrls: "httpsUrls=true",
+    httpsUrls: "httpUrls=true",
 };
 let apiURL = ""
 
