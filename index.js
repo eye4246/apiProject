@@ -33,7 +33,6 @@ function retrieve(event) {
     }
   }
   
-
 function myFunction(numberofShibas, apiURL){
     //document.getElementById(".myButton").innerHTML="<img src='http://shibe.online/api/shibes?count=1&urls=true&httpsUrls=true' alt='shiba' width='100%' />";
     console.log(`This is numberofShibas  ${numberofShibas}`)
